@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React_kiosk/static/css/main.697a950d.css",
+    "main.js": "/React_kiosk/static/js/main.fefcd57c.js",
+    "static/js/453.a3bcd854.chunk.js": "/React_kiosk/static/js/453.a3bcd854.chunk.js",
+    "index.html": "/React_kiosk/index.html",
+    "main.697a950d.css.map": "/React_kiosk/static/css/main.697a950d.css.map",
+    "main.fefcd57c.js.map": "/React_kiosk/static/js/main.fefcd57c.js.map",
+    "453.a3bcd854.chunk.js.map": "/React_kiosk/static/js/453.a3bcd854.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.697a950d.css",
+    "static/js/main.fefcd57c.js"
+  ]
+}
