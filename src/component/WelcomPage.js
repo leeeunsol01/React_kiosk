@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
+import Modal from './Modal.js';
 
 const MainImgBox = styled.div`
     width: 1080px;
@@ -20,6 +22,12 @@ const MainImgBox = styled.div`
 `;
 
 export default function WelcomPage() {
+  const [isAlertModal, setIsAlertModal] = useState(!sessionStorage.getItem('hide'));
+
+  const handleConfirm = () => {
+    sessionStorage.setItem('hide', 'true');
+    setIsAlertModal(false);
+  }
   return (
     <div style={{width: '1080px', height: '1920px', margin: '0 auto'}}>
       <Link to='/main/아이스크림'>
@@ -28,6 +36,11 @@ export default function WelcomPage() {
         </MainImgBox>
         <img src={process.env.PUBLIC_URL + '/images/banner.png'} style={{width: '1080px', height: '544px', display: 'block'}}  />
       </Link>
+      {isAlertModal && (
+        <Modal title={'알림'} confirmText={'확인'} onConfirm={handleConfirm}>
+          <div style={{width: '565px', fontSize: '36px', textAlign: 'center'}}>본 키오스크는 실제 기기 비율에 맞춰 제작되어 일부 화면에서 스크롤이 발생할 수 있습니다.</div>
+        </Modal>
+      )}
     </div>
   )
 }
