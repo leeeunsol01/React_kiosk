@@ -17,35 +17,6 @@ import { Pagination } from 'swiper/modules';
 import iceCream from './iceCremaData';
 import Footer from './Footer';
 
-const NavMenu = styled.li`
-    width: 243px;
-    color: #244289;
-    font-size: 24px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 70px;
-    position: relative;
-    &::before{
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: -20px;
-        transform: translateY(-50%);
-        background-image: url(${process.env.PUBLIC_URL + '/images/arrow.png'});
-        width: 20px;
-        height: 33px;
-    }
-    &:last-child::before{
-        content: none;
-    }
-`;
-
-const NavMenuChk = styled(NavMenu)`
-    background-color: #FDA2B9;
-    border-radius: 50px;
-    color: white;
-`;
-
 const SidePanel = styled.div`
     width: 243px;
     height: 610px;
@@ -82,28 +53,6 @@ const ProductSlid = styled(SwiperSlide)`
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 20px;
-`;
-
-const PrevBtn = styled.button`
-    width: 40px;
-    height: 66px;
-    position: absolute;
-    top: 30%;
-    left: 263px;
-    transform: translateY(-30%);
-    border: none;
-    background-color: transparent;
-`;
-
-const NextBtn = styled.button`
-    width: 40px;
-    height: 66px;
-    position: absolute;
-    top: 30%;
-    right: 0;
-    transform: translateY(-30%);
-    border: none;
-    background-color: transparent;
 `;
 
 const CartBox = styled.div`
@@ -216,11 +165,11 @@ export default function IceCreamPage() {
 
     return (
         <div style={{width: '1080px', margin: '40px auto 0', position: 'relative'}}>
-            <ul style={{width: '1032px', height: '70px', display: 'flex', margin: '0 24px 40px', gap: '20px'}}>
-                <NavMenuChk>메뉴 선택</NavMenuChk>
-                <NavMenu>주문 확인</NavMenu>
-                <NavMenu>할인</NavMenu>
-                <NavMenu>결제</NavMenu>
+            <ul className='navMenuBox'>
+                <li className='navMenuChk'>메뉴 선택</li>
+                <li>주문 확인</li>
+                <li>할인</li>
+                <li>결제</li>
             </ul>
             <div style={{display: 'flex'}}>
                 <SidePanel>
@@ -261,14 +210,14 @@ export default function IceCreamPage() {
                     {subGroup.length > 1 && (
                         <div>
                             {!isBeginning && (
-                                <PrevBtn onClick={()=> swiper?.slidePrev()}>
+                                <button className='prevBtn' style={{left: '263px'}} onClick={()=> swiper?.slidePrev()}>
                                     <img src={process.env.PUBLIC_URL + '/images/prev.png'} alt="" />
-                                </PrevBtn>
+                                </button>
                             )}
                             {!isEnd && (
-                                <NextBtn onClick={()=> swiper?.slideNext()}>
+                                <button className='nextBtn' onClick={()=> swiper?.slideNext()}>
                                     <img src={process.env.PUBLIC_URL + '/images/next.png'} alt="" />
-                                </NextBtn>
+                                </button>
                             )}
                         </div>
                     )}

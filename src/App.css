@@ -3,3 +3,167 @@
     height: 1920px;
     margin: 0 auto;
 }
+
+/******************* header *******************/
+.circleBox{
+    width: 70px;
+    height: 70px;
+    background-color: #FDA2B9;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.closeBtn{
+    width: 70px;
+    height: 70px;
+    background-color: #FDA2B9;
+    border-radius: 50%;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+}
+
+/******************* common setting *******************/
+.navMenuBox{
+    width: 1032px; 
+    height: 70px; 
+    display: flex; 
+    margin: 0 24px 20px; 
+    gap: 20px;
+}
+
+.navMenuBox li{
+    width: 243px;
+    color: #244289;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 70px;
+    position: relative;
+}
+
+.navMenuBox li.navMenuChk{
+    background-color: #FDA2B9;
+    border-radius: 50px;
+    color: white;
+}
+
+.navMenuBox li::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    background-image: url('../public/images/arrow.png');
+    width: 20px;
+    height: 33px;
+}
+
+.navMenuBox li:last-child::before{
+    content: none;
+}
+
+.prevBtn{
+    width: 40px;
+    height: 66px;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    transform: translateY(-30%);
+    border: none;
+    background-color: transparent;
+}
+
+.nextBtn{
+    width: 40px;
+    height: 66px;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    transform: translateY(-30%);
+    border: none;
+    background-color: transparent;
+}
+
+/******************* footer *******************/
+.footer{
+    width: 1032px;
+    height: 553px;
+    margin: 0 auto;
+    border-top: 1px solid #244289;
+    background-color: white;
+    position: relative;
+}
+
+.footer .foPrevBtn{
+    background-color: white;
+    width: 375px;
+    height: 80px;
+    border-radius: 50px;
+    font-size: 36px;
+    line-height: 80px;
+    position: relative;
+}
+
+.footer .foPrevBtn:active{
+    background-color: #EEEEEE;
+}
+
+.footer .foNextBtn{
+    width: 637px;
+    height: 80px;
+    background-color: #BDBDBD;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 36px;
+    line-height: 80px;
+    position: relative;
+}
+
+.footer .foNextBtn:active{
+    background-color: #FDA2B9;
+}
+
+/******************* modal *******************/
+.modalOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.modalOverlay .modalBox{
+    width: 769px;
+    background-color: white;
+    border-radius: 50px;
+    z-index: 10000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modalOverlay .modalBox .modalTitle{
+    width: 769px;
+    height: 130px;
+    border-radius: 50px 50px 0 0;
+    background-color: #FDA2B9;
+    color: white;
+    font-size: 42px;
+    text-align: center;
+    line-height: 130px;
+}
+
+.modalOverlay .modalBox .contents{
+    padding: 70px 102px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

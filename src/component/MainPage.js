@@ -46,28 +46,6 @@ const MainSlide = styled(SwiperSlide)`
     gap: 20px;
 `;
 
-const PrevBtn = styled.button`
-    width: 40px;
-    height: 66px;
-    position: absolute;
-    top: 30%;
-    left: 0;
-    transform: translateY(-30%);
-    border: none;
-    background-color: transparent;
-`;
-
-const NextBtn = styled.button`
-    width: 40px;
-    height: 66px;
-    position: absolute;
-    top: 30%;
-    right: 0;
-    transform: translateY(-30%);
-    border: none;
-    background-color: transparent;
-`;
-
 const CartBox = styled.div`
     position: relative;
     width: 211px;
@@ -206,14 +184,14 @@ export default function MainPage() {
         {mainGroup.length > 1 && (
             <div>
                 {!isBeginning && (
-                    <PrevBtn onClick={()=> swiper?.slidePrev()}>
+                    <button className='prevBtn' onClick={()=> swiper?.slidePrev()}>
                         <img src={process.env.PUBLIC_URL + '/images/prev.png'} alt="" />
-                    </PrevBtn>
+                    </button>
                 )}
                 {!isEnd && (
-                    <NextBtn onClick={()=> swiper?.slideNext()}>
+                    <button className='nextBtn' onClick={()=> swiper?.slideNext()}>
                         <img src={process.env.PUBLIC_URL + '/images/next.png'} alt="" />
-                    </NextBtn>
+                    </button>
                 )}
             </div>
         )}

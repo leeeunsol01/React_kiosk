@@ -2,28 +2,6 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { clearCart } from './store';
-import styled from 'styled-components';
-
-const CircleBox = styled.div`
-    width: 70px;
-    height: 70px;
-    background-color: #FDA2B9;
-    border-radius: 50%;
-    margin-right: 20px;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-`;
-
-const CloseBtn = styled(Link)`
-    width: 70px;
-    height: 70px;
-    background-color: #FDA2B9;
-    border-radius: 50%;
-    display: flex;   
-    align-items: center;
-    justify-content: center;
-`;
 
 export default function Header() {
   const location = useLocation();
@@ -36,12 +14,12 @@ export default function Header() {
           <>
             <img src={process.env.PUBLIC_URL + '/images/h_logo.png'} style={{width: '70px', height: '81px', paddingLeft: '24px'}}/>
             <div style={{display: 'flex', paddingRight: '24px'}}>
-                <CircleBox>
+                <div className='circleBox'>
                     <p style={{color: '#25438A', fontSize: '32px', fontWeight: '600'}}>KR</p>
-                </CircleBox>
-                <CloseBtn to='/' onClick={() => dispatch(clearCart())}>
+                </div>
+                <Link to='/' className='closeBtn' onClick={() => dispatch(clearCart())}>
                     <img src={process.env.PUBLIC_URL + '/images/main_close.png'} style={{width: '35px', height: '35px'}} />
-                </CloseBtn>
+                </Link>
             </div>
           </>
         )}

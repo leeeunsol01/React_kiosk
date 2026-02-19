@@ -7,35 +7,6 @@ import { clearPoint, setPoint } from './store';
 import Footer from './Footer';
 import Modal from './Modal';
 
-const NavMenu = styled.li`
-    width: 243px;
-    color: #244289;
-    font-size: 24px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 70px;
-    position: relative;
-    &::before{
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: -20px;
-        transform: translateY(-50%);
-        background-image: url(${process.env.PUBLIC_URL + '/images/arrow.png'});
-        width: 20px;
-        height: 33px;
-    }
-    &:last-child::before{
-        content: none;
-    }
-`;
-
-const NavMenuChk = styled(NavMenu)`
-    background-color: #FDA2B9;
-    border-radius: 50px;
-    color: white;
-`;
-
 const PointBtn = styled.button`
     border: 1px solid #6E6E6E;
     border-radius: 20px;
@@ -133,11 +104,11 @@ export default function DiscountPage() {
     
   return (
     <div style={{width: '1080px', margin: '40px auto 0', position: 'relative'}}>
-        <ul style={{width: '1032px', height: '70px', display: 'flex', margin: '0 24px 20px', gap: '20px'}}>
-            <NavMenu>메뉴 선택</NavMenu>
-            <NavMenu>주문 확인</NavMenu>
-            <NavMenuChk>할인</NavMenuChk>
-            <NavMenu>결제</NavMenu>
+        <ul className='navMenuBox'>
+            <li>메뉴 선택</li>
+            <li>주문 확인</li>
+            <li className='navMenuChk'>할인</li>
+            <li>결제</li>
         </ul>
         <div style={{fontSize: '36px', fontWeight: '600', borderBottom: '1px solid #244289', paddingBottom: '40px', margin: '0 24px'}}>할인 / 적립 수단을 선택해주세요.</div>
         <div style={{height: '1032px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px'}}>
