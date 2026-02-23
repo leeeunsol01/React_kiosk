@@ -226,7 +226,8 @@ const menu = [
       name: '싱글킹 (콘 / 컵)',
       price: 4700,
       img: process.env.PUBLIC_URL + '/images/single.png',
-  }
+  },
+  ...
 ];
 ```
 
@@ -250,6 +251,7 @@ const menu = [
       img: process.env.PUBLIC_URL + '/images/double.png',
       flavor: 2,
   },
+  ...
 ];
 
 // flavor 개수만큼 선택 가능
