@@ -14,19 +14,22 @@
 - 포인트 사용 시 총 상품 금액에서 해당 포인트만큼 자동 차감
 
 ## 📦 컴포넌트 구조
+<pre> ```
 baskin_robbins/
-├── src/
-  ├── component/            # 재사용 가능한 컴포넌트
-    ├── data.js             # 모든 상품의 데이터
-    ├── DiscountPage.js     # 할인 페이지
-    ├── Footer.js           # Footer 기본 틀
-    ├── Header.js           # 공용 Header
-    ├── IceCreamPage.js     # 아이스크림 카테고리 맛 선택 페이지
-    ├── IceCreamData.js     # 아이스크림 맛 데이터
-    ├── MainPage.js         # 메인 페이지
-    ├── Modal.js            # 모달 기본 틀
-    ├── OrderChkPage.js     # 상품 확인 페이지
-    ├── PayPage.js          # 결제 페이지
-    ├── store.js            # 장바구니 상태관리
-    ├── swiper.css          # swiper 스타일
-    └── WelcomePage.js      # 처음 보여지는 페이지
+  ├── src/
+    ├── component/            # 재사용 가능한 컴포넌트
+      ├── data.js             # 모든 상품의 데이터
+      ├── DiscountPage.js     # 할인 페이지
+      ├── Footer.js           # Footer 기본 틀
+      ├── Header.js           # 공용 Header
+      ├── IceCreamPage.js     # 아이스크림 카테고리 맛 선택 페이지
+      ├── IceCreamData.js     # 아이스크림 맛 데이터
+      ├── MainPage.js         # 메인 페이지
+      ├── Modal.js            # 모달 기본 틀
+      ├── OrderChkPage.js     # 상품 확인 페이지
+      ├── PayPage.js          # 결제 페이지
+      ├── store.js            # 장바구니 상태관리
+      ├── swiper.css          # swiper 스타일
+      └── WelcomePage.js      # 처음 보여지는 페이지
+    ```
+</pre>
