@@ -61,6 +61,7 @@ const Modal = ({children, title, confirmText, onConfirm, cancelText, onCancel}) 
 |:--:|
 |  ![장바구니 수량](img/CartCount.gif)  |
 
+#### store.js
 ```javascript
 const cart = createSlice({
     name: 'cart',
