@@ -163,7 +163,7 @@ const iceCream = [
 
 | 아이스크림 (콘/컵) 선택 |
 |:--:|
-|  ![장바구니 수량](img/ConeCup.gif)  |
+|  ![아이스크림 (콘/컵)](img/ConeCup.gif)  |
 
 #### MainPage.js
 > 아이스크림 카테고리만 뽑아서 필터링
@@ -270,7 +270,7 @@ const menu = [
 
 | 포인트 적용 / 취소 |
 |:--:|
-|  ![장바구니 수량](img/Point.gif)  |
+|  ![포인트 적용 / 취소](img/Point.gif)  |
 
 #### DiscountPage.js
 > 전화번호 입력 / 취소
