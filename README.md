@@ -35,7 +35,8 @@ baskin_robbins/
 
 ## 🧠 설계 및 구현 과정
 ### 1. UI 컴포넌트 분리
-Footer와 Modal을 분리하여 재사용성과 유지보수성을 고려했습니다.
+페이지별로 반복되는 하단 영역과 모달 UI를 공통 컴포넌트로 분리하여 재사용성과 확장성을 고려한 구조로 설계했습니다.
+
 ```jsx
 export default function Footer({children, onPrev, onNext, nextText="결제하기"}) {
   return (
@@ -52,7 +53,7 @@ const Modal = ({children, title, confirmText, onConfirm, cancelText, onCancel}) 
 ```
 
 ### 2. 상태관리 분리
-장바구니(cart)와 포인트(point)를 별도의 slice로 분리하여 Redux Toolkit으로 상태를 관리했습니다.  
+서로 다른 책임을 가진 상태(cart, point)를 별도의 slice로 분리하여 상태 변경 범위를 명확히 하고 유지보수성을 고려했습니다.
 - **cart slice**: 상품 추가/삭제, 수량 조절, 아이스크림 옵션 선택, 맛 선택, 장바구니 초기화 기능  
 - **point slice**: 포인트 저장 및 초기화 기능  
 - 전역 상태로 관리하여 페이지 전환 시에도 상태 유지
